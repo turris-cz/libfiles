@@ -1,0 +1,22 @@
+= SHell Utilities in C (shuc)
+CZ.NIC z.s.p.o. <packaging@turris.cz>
+v1.0, 2021-04-16
+:icons:
+
+This library implements basic file operation such as those found in shell. Its
+only dependency is POSIX. Its aims to simplify operations such as file copy,
+move or recursive removal without having to spawn standard shell utility.
+
+The reason for this library existence is because sometimes we can't rely on shell
+utilities to be correctly setup such as in case our program manipulates with root
+file system. There is only limited number of such programs but still they need
+something like this. It should be easier in most cases to just spawn standard
+shell utility thus consider if you really need this library before you start using
+it.
+
+This library currently supports this set of functionalities:
+* Copy including recursive copy
+* Move
+* Recursive removal
+
+NOTE: This library is UNIX only. It does not support Windows paths at the moment.
